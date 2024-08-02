@@ -42,7 +42,7 @@ O projeto é uma aplicação Spring Boot que utiliza um banco de dados H2 para p
 
     ```bash
     git clone https://github.com/seu-usuario/autorizador-caju.git
-    cd autorizador
+    cd autorizador-caju
     ```
 
 2. **Compile e Execute o Projeto**
