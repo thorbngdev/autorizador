@@ -39,7 +39,6 @@ public class TransactionServiceImplTest {
     @Test
     @Transactional
     public void shouldAuthorizeTransactionWhenAccountAndMerchantAreValid() {
-        // Given
         Account account = new Account("100", BigDecimal.valueOf(100.00), BigDecimal.valueOf(200.00), BigDecimal.valueOf(1300.00));
         Merchant merchant = new Merchant(1L, "PADARIA DO ZE SAO PAULO BR", "5411");
         Transaction transaction = new Transaction("100", BigDecimal.valueOf(50.00), "5411", "PADARIA DO ZE SAO PAULO BR");
@@ -47,10 +46,8 @@ public class TransactionServiceImplTest {
         when(accountRepository.findById("100")).thenReturn(Optional.of(account));
         when(merchantRepository.findByMerchantName("PADARIA DO ZE SAO PAULO BR")).thenReturn(Optional.of(merchant));
 
-        // When
         TransactionResponse response = transactionService.authorize(transaction);
 
-        // Then
         assertEquals(TransactionCode.APPROVED.getCode(), response.getCode());
         verify(accountRepository).save(account);
     }
