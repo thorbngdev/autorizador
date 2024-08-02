@@ -62,6 +62,14 @@ O projeto é uma aplicação Spring Boot que utiliza um banco de dados H2 para p
     mvn test
     ```
 
+4. **Acessando o Banco de Dados H2**
+
+   Após iniciar a aplicação, você pode acessar o banco de dados H2 através do console web.
+
+    - **URL do Console**: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+    - **Username**: `caju`
+    - **Senha**: `123`
+
 ## Endpoints
 
 O projeto expõe um endpoint HTTP para autorizar transações:
@@ -92,6 +100,7 @@ O projeto expõe um endpoint HTTP para autorizar transações:
   - `51` - Saldo insuficiente
   - `07` - Outro problema
 
-## Agradecimentos
+### Versão do Java
 
-Obrigado pela oportunidade
+Este projeto utiliza Java 17.
+
